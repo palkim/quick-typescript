@@ -47,4 +47,9 @@ Version: 5.7.9
 Publisher: Ritwick Dey
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
+# Create React App with typescript
+
+```bash
+    npx create-react-app . --template typescript
+```
 
