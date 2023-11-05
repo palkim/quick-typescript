@@ -17,3 +17,34 @@ outDir -> is where the compiled js files' go
 
 # Create a tsconfig.json
 
+```bash
+    tsc --init
+```
+
+# Use tsc compile in watch mode
+
+```bash
+    tsc --watch
+```
+
+# See the output of the compiled js code
+
+If you want to see the output of console.log() in terminal
+
+```bash
+    cd dist
+    node index
+```
+
+# Run in browser
+
+Open index.html in browser or use live server plugin in VSCode
+
+Name: Live Server
+Id: ritwickdey.LiveServer
+Description: Launch a development local Server with live reload feature for static & dynamic pages
+Version: 5.7.9
+Publisher: Ritwick Dey
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+
