@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Directions3 = exports.Directions2 = exports.Directions1 = exports.pid = exports.employees = exports.employee = exports.xs = exports.isRegisteredAll = exports.names = exports.ids = exports.x = exports.isRegistered = exports.name = exports.id = void 0;
+exports.strArray = exports.numArray = exports.worker = exports.brad = exports.subtract = exports.add = exports.user3 = exports.log = exports.addNum = exports.customerID2 = exports.customerID1 = exports.user2 = exports.user1 = exports.Directions3 = exports.Directions2 = exports.Directions1 = exports.pid = exports.employees = exports.employee = exports.xs = exports.isRegisteredAll = exports.names = exports.ids = exports.x = exports.isRegistered = exports.name = exports.id = void 0;
 // Basic Types
 let id = 5;
 exports.id = id;
@@ -30,7 +30,7 @@ let employees = [
     [3, 'Damla', false]
 ];
 exports.employees = employees;
-// Union of types for a variables -> productID can come as string or number
+// Union Types: Union of types for a variables -> productID can come as string or number
 let pid = 5;
 exports.pid = pid;
 exports.pid = pid = '22';
@@ -56,3 +56,71 @@ var Directions3;
     Directions3[Directions3["Left"] = 2] = "Left";
     Directions3[Directions3["Right"] = 3] = "Right"; //3
 })(Directions3 || (exports.Directions3 = Directions3 = {}));
+// Objects
+const user1 = {
+    id: 1,
+    name: 'Petek'
+};
+exports.user1 = user1;
+const user2 = {
+    id: 1,
+    name: 'Petek'
+};
+exports.user2 = user2;
+// Type Assertion
+// Check out in which cases type assertion might be useful yourself.
+let cid = 'test';
+let customerID1 = cid;
+exports.customerID1 = customerID1;
+let customerID2 = cid;
+exports.customerID2 = customerID2;
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+exports.addNum = addNum;
+// Void
+function log(message) {
+    console.log(message);
+}
+exports.log = log;
+const user3 = {
+    id: 1,
+    name: 'Petek'
+};
+exports.user3 = user3;
+const add = (x, y) => x + y;
+exports.add = add;
+const subtract = (x, y) => x - y;
+exports.subtract = subtract;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now register`;
+    }
+}
+const brad = new Person(1, 'Brad Traversy');
+exports.brad = brad;
+// SubClasses
+class Worker extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const worker = new Worker(1, 'Shawn', 'Developer');
+exports.worker = worker;
+console.log(worker.register());
+// Generics -> reusable components
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+exports.numArray = numArray;
+let strArray = getArray(['Petek', 'Ankara', 'Özgür']);
+exports.strArray = strArray;
+strArray.push(1); //Throws error
