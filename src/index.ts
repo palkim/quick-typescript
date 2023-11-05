@@ -166,7 +166,7 @@ function getArray<T>(items: T[]): T[] {
 let numArray = getArray<number>([1,2,3,4])
 let strArray = getArray<string>(['Petek', 'Ankara', 'Özgür'])
 
-strArray.push(1) //Throws error
+// strArray.push(1) //Throws error
  
 export {
     id, name, isRegistered, x,

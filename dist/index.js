@@ -123,4 +123,3 @@ let numArray = getArray([1, 2, 3, 4]);
 exports.numArray = numArray;
 let strArray = getArray(['Petek', 'Ankara', 'Özgür']);
 exports.strArray = strArray;
-strArray.push(1); //Throws error
