@@ -106,6 +106,7 @@ interface UserInterface { // Cannot be used instead of primitive types like `typ
     readonly id: number // cannot assign to id because readonly
     name: string
     age?: number // Optional Parameter, not give an error if not included in Object
+    test?(): void // Can make functions Optional
 }
 
 const user3: UserInterface = {
